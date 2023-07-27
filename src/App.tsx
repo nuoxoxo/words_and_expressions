@@ -6,17 +6,14 @@ import PrinterIDM from "./PrinterIDM"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
-
   const [isSwitched, setIsSwitched] = useState<boolean>(true)
 
   const toggleIO = () => {
-
     setIsSwitched((prevChoice: boolean) => !prevChoice)
   }
 
   return (
-
-    <BrowserRouter basename={ import.meta.env.DEV ? "/" : "/coughing/" }>
+    <BrowserRouter basename={import.meta.env.DEV ? "/" : "/coughing/"}>
       <Routes>
         <Route
           path="/"
@@ -24,20 +21,14 @@ function App() {
             <>
               <div className="main-body-upper">
                 <button className="toggle-button" onClick={toggleIO}>
-                  {isSwitched ? "Idioms" : "HSK-3"}
+                  {isSwitched ? "Idioms" : "Words"}
                 </button>
               </div>
-              <div className="main-body-lower">
-                <div className="text">
-                </div>
-                <div className="text">
-                  { isSwitched ? <PrinterHSK /> : <PrinterIDM /> }
-                </div>
-              </div>
+              {isSwitched ? <PrinterHSK /> : <PrinterIDM />}
             </>
           }
         />
-        <Route path="/about" element={ <div>About</div> } />
+        <Route path="/about" element={<div>About</div>} />
       </Routes>
     </BrowserRouter>
   )

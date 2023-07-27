@@ -1,22 +1,19 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react"
 
 const sourcePath =
-  'https://raw.githubusercontent.com/crazywhalecc/idiom-database/master/data/idiom.json'
+  "https://raw.githubusercontent.com/crazywhalecc/idiom-database/master/data/idiom.json"
 
 interface Idiom {
   word: string
 }
 
 var PrinterIDM = () => {
-
   const [names, setNames] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
   const [textColor, setTextColor] = useState(getRandomTextColor())
 
   const fetchData = async () => {
-
     try {
-
       const resp = await fetch(sourcePath)
 
       const data: Idiom[] = await resp.json()
@@ -28,7 +25,7 @@ var PrinterIDM = () => {
       setNames(extractedNames)
       setLoading(false)
     } catch (error) {
-      console.error('Error fetching data:', error)
+      console.error("Error fetching data:", error)
       setLoading(false)
     }
   }
@@ -40,14 +37,11 @@ var PrinterIDM = () => {
   }, [])
 
   const [name, setSingleName] = useState<string>(() => {
-
-    if (names.length === 0)
-      return ''
+    if (names.length === 0) return ""
     return names[Math.floor(Math.random() * names.length)]
   })
 
   useEffect(() => {
-
     if (names.length > 0) {
       const res = names[Math.floor(Math.random() * names.length)]
       setSingleName(res)
@@ -61,21 +55,19 @@ var PrinterIDM = () => {
     const offsetInverted = 255 - offset
     return {
       color:
-        'rgb(' +
+        "rgb(" +
         Math.round(Math.random() * offsetInverted + offset) +
-        ',' +
+        "," +
         Math.round(Math.random() * offsetInverted + offset) +
-        ',' +
+        "," +
         Math.round(Math.random() * offsetInverted + offset) +
-        ',' +
-        '1)',
-      fontWeight: 'bold',
-      cursor: 'pointer',
+        "," +
+        "1)",
+      fontWeight: "bold",
     }
   }
 
   var handleOnClick = () => {
-
     setTextColor(getRandomTextColor())
     if (names.length === 0) return
     setSingleName(names[Math.floor(Math.random() * names.length)])
@@ -84,24 +76,27 @@ var PrinterIDM = () => {
   // console.log(textColor['color']) // test
 
   return (
-
-<>
-      {loading ? (
-        <span>Loading...</span>
-      ) : (
-        <>
-          <span
-            className='text'
-            title='click me !!!'
-            onClick={handleOnClick}
-            style={textColor}
-          >
-            {name}
-          </span>
-          <br />
-          <span>{names.length > 0 && names.indexOf(name)}</span>
-        </>
-      )}
+    <>
+      <div className="main-body-lower" onClick={handleOnClick}>
+        <div className="div-text">
+          {loading ? (
+            <span>Loading...</span>
+          ) : (
+            <>
+              <span
+                className="span-text"
+                title="click me !!!"
+                // onClick={handleOnClick}
+                style={textColor}
+              >
+                {name}
+              </span>
+              <br />
+              <span>{names.length > 0 && names.indexOf(name)}</span>
+            </>
+          )}
+        </div>
+      </div>
     </>
   )
 }
