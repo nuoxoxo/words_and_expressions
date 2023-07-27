@@ -19,7 +19,7 @@ export default defineConfig(({ command }) => {
     base: '/',
     // baseurl: ''
     build: {
-      assetsInclude: ['src/styles.css'],
+      assetsInclude: ['src/styles/styles.css'],
     }
   }
 
