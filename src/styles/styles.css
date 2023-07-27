@@ -47,22 +47,9 @@ body {
   margin-bottom: 42px;
   min-width: 90vw;
   cursor: pointer;
-<<<<<<< HEAD:src/styles.css
 }
 
 .div-text {
-=======
-}
-
-.div-text {
-
-  text-align: center;
-  font-size: 42px;
-  user-select: none;
-}
-
-.span-text {
->>>>>>> dc88cb2663b986e90f88e89a70c2819d543b4d20:src/styles/styles.css
 
   text-align: center;
   font-size: 42px;
