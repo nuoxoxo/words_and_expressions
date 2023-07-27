@@ -33,7 +33,7 @@ body {
     height: 10vh;
     /* Add a fixed height to the upper div if needed */
     /* flex-grow: 1; */
-    min-width: 90vw;
+    /* min-width: 90vw; */
   }
 
 .main-body-lower {
@@ -43,7 +43,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 42px;
-    min-width: 90vw;
+    /* min-width: 90vw; */
 
     /* flex-grow: 3; */
   }
@@ -53,6 +53,8 @@ body {
     font-size: 42px;
     user-select: none;
     /* min-width: 90vw; */
+    padding-left: 42px;
+    padding-right: 42px
 }
 
 span.text {
