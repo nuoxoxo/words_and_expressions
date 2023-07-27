@@ -34,7 +34,7 @@ body {
   /* Center all children vertically */
   height: 10vh;
   /* Add a fixed height to the upper div if needed */
-  /* min-width: 90vw; */
+  /* min-width: 95vw; */
 }
 
 .main-body-lower {
@@ -45,7 +45,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 42px;
-  min-width: 90vw;
+  min-width: 95vw;
   cursor: pointer;
 }
 
@@ -60,7 +60,7 @@ body {
 
   text-align: center;
   font-size: 42px;
-  min-width: 90vw;
+  /* min-width: 95vw; */
   user-select: none;
 }
 
