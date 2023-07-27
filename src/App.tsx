@@ -1,18 +1,18 @@
-import { useState } from "react";
-import PrinterHSK from "./PrinterHSK";
-import PrinterIDM from "./PrinterIDM";
+import { useState } from "react"
+import PrinterHSK from "./PrinterHSK"
+import PrinterIDM from "./PrinterIDM"
 
 // added for deployment
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 function App() {
 
-  const [isSwitched, setIsSwitched] = useState<boolean>(true);
+  const [isSwitched, setIsSwitched] = useState<boolean>(true)
 
   const toggleIO = () => {
 
-    setIsSwitched((prevChoice: boolean) => !prevChoice);
-  };
+    setIsSwitched((prevChoice: boolean) => !prevChoice)
+  }
 
   return (
 
@@ -40,7 +40,7 @@ function App() {
         <Route path="/about" element={ <div>About</div> } />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

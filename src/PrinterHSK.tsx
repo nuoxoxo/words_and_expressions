@@ -1,52 +1,60 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
 const sourcePath =
-  'https://raw.githubusercontent.com/koynoyno/hsk3.0-json/main/hsk3.json';
+  'https://raw.githubusercontent.com/koynoyno/hsk3.0-json/main/hsk3.json'
 
 interface Word {
-  words: string;
-  simplified: string;
+
+  words: string
+  simplified: string
 }
 
 var PrinterHSK = () => {
-  const [words, setWords] = useState<Word[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [words, setWords] = useState<Word[]>([])
+  const [loading, setLoading] = useState(true)
 
   const fetchData = async () => {
+
     try {
-      const resp = await fetch(sourcePath);
-      const data = await resp.json();
-      // setWords(data['words']);
-      setWords(data.words);
-      setLoading(false);
+
+      const resp = await fetch(sourcePath)
+      const data = await resp.json()
+      // setWords(data['words'])
+      setWords(data.words)
+      setLoading(false)
     } catch (error) {
-      console.error('Error fetching data:', error);
-      setLoading(false);
+      console.error('Error fetching data:', error)
+      setLoading(false)
     }
-  };
+  }
 
   useEffect(() => {
-    fetchData();
-  }, []);
 
-  const [textColor, setTextColor] = useState(getRandomTextColor());
+    fetchData()
+  }, [])
+
+  const [textColor, setTextColor] = useState(getRandomTextColor())
 
   const [name, setSingleName] = useState<string>(() => {
-    if (words.length === 0) return '';
-    return words[Math.floor(Math.random() * words.length)].simplified;
-  });
+
+    if (words.length === 0) return ''
+    return words[Math.floor(Math.random() * words.length)].simplified
+  })
 
   useEffect(() => {
+
     if (words.length > 0) {
-      const res = words[Math.floor(Math.random() * words.length)].simplified;
-      setSingleName(res);
+      const res = words[Math.floor(Math.random() * words.length)].simplified
+      setSingleName(res)
     }
-  }, [words]);
+  }, [words])
 
   function getRandomTextColor() {
-    const offset = 42;
-    const offsetInverted = 255 - offset;
+
+    const offset = 42
+    const offsetInverted = 255 - offset
     return {
+
       color:
         'rgb(' +
         Math.round(Math.random() * offsetInverted + offset) +
@@ -58,14 +66,15 @@ var PrinterHSK = () => {
         '1)',
       fontWeight: 'bold',
       cursor: 'pointer',
-    };
+    }
   }
 
   var handleOnClick = () => {
-    setTextColor(getRandomTextColor());
-    if (words.length === 0) return;
-    setSingleName(words[Math.floor(Math.random() * words.length)].simplified);
-  };
+
+    setTextColor(getRandomTextColor())
+    if (words.length === 0) return
+    setSingleName(words[Math.floor(Math.random() * words.length)].simplified)
+  }
 
   return (
     <>
@@ -86,7 +95,7 @@ var PrinterHSK = () => {
         </>
       )}
     </>
-  );
-};
+  )
+}
 
-export default PrinterHSK;
+export default PrinterHSK
