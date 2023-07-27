@@ -52,7 +52,12 @@ body {
     text-align: center;
     font-size: 42px;
     user-select: none;
-    min-width: 90vw;
+    /* min-width: 90vw; */
+}
+
+span.text {
+
+  min-width: 90vw;
 }
 
 /* toggle button in App.tsx */
