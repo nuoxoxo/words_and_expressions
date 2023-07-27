@@ -35,18 +35,21 @@ body {
   height: 10vh;
   /* Add a fixed height to the upper div if needed */
   /* min-width: 95vw; */
+  padding-top: 50vh;
 }
 
 .main-body-lower {
 
-  height: 60vh;
+  top: 50%;
+  height: 32vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 42px;
+  /* margin-bottom: 42px; */
   min-width: 95vw;
   cursor: pointer;
+  padding-bottom: 50vh;
 }
 
 .div-text {
@@ -65,8 +68,10 @@ body {
 }
 
 button {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
   user-select: none;
 }
 
