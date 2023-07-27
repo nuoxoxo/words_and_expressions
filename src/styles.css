@@ -16,7 +16,7 @@ body {
   align-items: center;
   /* center all children vertically */
   font-family: var(--FONT-TEXT);
-  /* user-select: 'none'; */
+  user-select: 'none';
 
   position: absolute;
   top: 50%;
@@ -45,25 +45,30 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 42px;
-  /* min-width: 90vw; */
+  min-width: 90vw;
+  cursor: pointer;
 }
 
-.text {
+.div-text {
 
   text-align: center;
   font-size: 42px;
   user-select: none;
-  /* min-width: 90vw; */
-  /* padding-left: 21px; */
-  /* padding-right: 21px */
 }
 
-span.text {
+.span-text {
 
+  text-align: center;
+  font-size: 42px;
   min-width: 90vw;
+  user-select: none;
 }
 
-/* toggle button in App.tsx */
+button {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
+}
 
 .toggle-button {
 
