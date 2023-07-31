@@ -1,6 +1,6 @@
 import { useState } from "react"
-import PrinterHSK from "./PrinterHSK"
-import PrinterIDM from "./PrinterIDM"
+import PrinterHSK from "./components/PrinterHSK"
+import PrinterIDM from "./components/PrinterIDM"
 
 // added for deployment
 import { BrowserRouter, Routes, Route } from "react-router-dom"

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { getRandomColorCSS } from "./GetRandomStuff"
 
 const sourcePath =
   "https://raw.githubusercontent.com/crazywhalecc/idiom-database/master/data/idiom.json"
@@ -10,7 +11,7 @@ interface Idiom {
 var PrinterIDM = () => {
   const [names, setNames] = useState<string[]>([])
   const [loading, setLoading] = useState(true)
-  const [textColor, setTextColor] = useState(getRandomTextColor())
+  const [textColor, setTextColor] = useState(getRandomColorCSS())
 
   const fetchData = async () => {
     try {
@@ -50,25 +51,8 @@ var PrinterIDM = () => {
 
   // console.log(name) // testing
 
-  function getRandomTextColor() {
-    const offset = 42
-    const offsetInverted = 255 - offset
-    return {
-      color:
-        "rgb(" +
-        Math.round(Math.random() * offsetInverted + offset) +
-        "," +
-        Math.round(Math.random() * offsetInverted + offset) +
-        "," +
-        Math.round(Math.random() * offsetInverted + offset) +
-        "," +
-        "1)",
-      fontWeight: "bold",
-    }
-  }
-
   var handleOnClick = () => {
-    setTextColor(getRandomTextColor())
+    setTextColor(getRandomColorCSS())
     if (names.length === 0) return
     setSingleName(names[Math.floor(Math.random() * names.length)])
   }
