@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { getRandomColorCSS } from "./GetRandomStuff"
 
 const sourcePath =
-  "https://raw.githubusercontent.com/koynoyno/hsk3.0-json/main/hsk3.json"
+  "https://raw.githubusercontent.com/nuoxoxo/in/main/hsk3.json"
 
 interface Word {
   words: string
