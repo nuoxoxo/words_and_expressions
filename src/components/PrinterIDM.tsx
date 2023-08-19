@@ -76,7 +76,7 @@ var PrinterIDM = () => {
                 {name}
               </span>
               <br />
-              <span>{names.length > 0 && names.indexOf(name)}</span>
+              {/* <span>{names.length > 0 && names.indexOf(name)}</span> */}
             </>
           )}
         </div>

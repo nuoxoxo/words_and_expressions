@@ -24,7 +24,7 @@ function App() {
                   {isSwitched ? "Idioms" : "Words"}
                 </button>
               </div>
-              {isSwitched ? <PrinterHSK /> : <PrinterIDM />}
+              {isSwitched ? <PrinterIDM /> : <PrinterHSK />}
             </>
           }
         />
