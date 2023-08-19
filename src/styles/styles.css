@@ -31,7 +31,6 @@ body {
   }
 }
 
-
 .outer {
   font-size: var(--FONT-SIZE-2X);
 }
@@ -87,11 +86,11 @@ body {
     padding-top: 100%;
   }
   .toggle-button {
-    font-size: 120px;
+    font-size: 111px;
   }
 
   .div-text {
-    font-size: 88px;
+    font-size: 77px;
     overflow-wrap: break-word;
     padding-bottom: 100%;
     padding-top: 4%;
