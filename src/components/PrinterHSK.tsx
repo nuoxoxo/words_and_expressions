@@ -52,20 +52,13 @@ var PrinterHSK = () => {
 
   return (
     <>
-      <div className="main-body-lower" onClick={handleOnClick}>
-        <div className="div-text">
+      <div className="lower" onClick={handleOnClick}>
+        <div className="div-text div-text-hsk">
           {loading ? (
-            <span>Loading...</span>
+            <span>加載中...</span>
           ) : (
             <>
-              <span
-                className="span-text"
-                title="click me !!!"
-                // onClick={handleOnClick}
-                style={textColor}
-              >
-                {name}
-              </span>
+              <span className="span-text" title="click me" style={textColor}>{name}</span>
               <br />
             </>
           )}

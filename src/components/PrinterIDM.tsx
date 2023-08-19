@@ -57,26 +57,18 @@ var PrinterIDM = () => {
     setSingleName(names[Math.floor(Math.random() * names.length)])
   }
 
-  // console.log(textColor['color']) // test
-
   return (
     <>
-      <div className="main-body-lower" onClick={handleOnClick}>
-        <div className="div-text">
+      <div className="lower" onClick={handleOnClick}>
+        <div className="div-text div-text-idm">
           {loading ? (
-            <span>Loading...</span>
+            <span>加載中...</span>
           ) : (
             <>
-              <span
-                className="span-text"
-                title="click me !!!"
-                // onClick={handleOnClick}
-                style={textColor}
-              >
-                {name}
+              <span className="span-text" title="click me" style={textColor} >
+                { name }
               </span>
               <br />
-              {/* <span>{names.length > 0 && names.indexOf(name)}</span> */}
             </>
           )}
         </div>
