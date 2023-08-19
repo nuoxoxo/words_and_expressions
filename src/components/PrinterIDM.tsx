@@ -62,7 +62,7 @@ var PrinterIDM = () => {
       <div className="lower" onClick={handleOnClick}>
         <div className="div-text div-text-idm">
           {loading ? (
-            <span>加載中...</span>
+            <span>(加載中)</span>
           ) : (
             <>
               <span className="span-text" title="click me" style={textColor} >

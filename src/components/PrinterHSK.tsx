@@ -55,7 +55,7 @@ var PrinterHSK = () => {
       <div className="lower" onClick={handleOnClick}>
         <div className="div-text div-text-hsk">
           {loading ? (
-            <span>加載中...</span>
+            <span>(加載中)</span>
           ) : (
             <>
               <span className="span-text" title="click me" style={textColor}>{name}</span>

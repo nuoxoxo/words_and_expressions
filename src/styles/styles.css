@@ -54,7 +54,7 @@ body {
 .toggle-button {
 
   font-size: 230px;
-  border: 2px solid #ccc;
+  border: 1.7px solid #ccc;
   border-radius: 20px;
   padding: 10px 20px;
   /* color:var(--FONT-COLOR); */
@@ -83,14 +83,14 @@ body {
 @media only screen and (max-width: 768px) {
 
   .upper {
-    padding-top: 100%;
+    padding-top: 90%;
   }
   .toggle-button {
     font-size: 111px;
   }
 
   .div-text {
-    font-size: 77px;
+    font-size: 88px;
     overflow-wrap: break-word;
     padding-bottom: 100%;
     padding-top: 4%;
