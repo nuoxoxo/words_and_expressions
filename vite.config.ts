@@ -24,7 +24,7 @@ export default defineConfig(({ command }) => {
   }
 
   if (command !== 'serve') {
-    config.base = '/coughing/'
+    config.base = '/words_and_expressions/'
   }
 
   return config
