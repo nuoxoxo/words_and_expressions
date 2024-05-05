@@ -1,4 +1,4 @@
-[![coughing](https://github.com/nuoxoxo/coughing/actions/workflows/coughing.yml/badge.svg)](https://github.com/nuoxoxo/coughing/actions/workflows/coughing.yml)
+[![deploy](https://github.com/nuoxoxo/words_and_expressions/actions/workflows/deploy.yml/badge.svg)](https://github.com/nuoxoxo/words_and_expressions/actions/workflows/deploy.yml)
 
 package.json
 ```
