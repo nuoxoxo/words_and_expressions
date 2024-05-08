@@ -7,6 +7,7 @@ const sourcePath =
 interface Word {
   words: string
   simplified: string
+  traditional: string
 }
 
 var PrinterHSK = () => {
@@ -34,12 +35,14 @@ var PrinterHSK = () => {
 
   const [name, setSingleName] = useState<string>(() => {
     if (words.length === 0) return ""
-    return words[Math.floor(Math.random() * words.length)].simplified
+    let word = words[Math.floor(Math.random() * words.length)]
+    return word.traditional + ' - ' + word.simplified
   })
 
   useEffect(() => {
     if (words.length > 0) {
-      const res = words[Math.floor(Math.random() * words.length)].simplified
+      let word = words[Math.floor(Math.random() * words.length)]
+      const res = word.traditional + ' - ' + word.simplified
       setSingleName(res)
     }
   }, [words])
@@ -47,7 +50,8 @@ var PrinterHSK = () => {
   var handleOnClick = () => {
     setTextColor(getRandomColorCSS())
     if (words.length === 0) return
-    setSingleName(words[Math.floor(Math.random() * words.length)].simplified)
+    let word = words[Math.floor(Math.random() * words.length)]
+    setSingleName(word.traditional + ' - ' + word.simplified)
   }
 
   return (
